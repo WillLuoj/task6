@@ -42,4 +42,20 @@ main .btn {
 .price {
     padding: 15px 0;
     text-align: right;
+    color: red;
+}
+.price span {
+    color: #5FC0CD;
+    margin-left: 1rem;
+    font-size: 2rem;
+
+
+}
+.row img {
+    width: 1.3rem;
+    vertical-align: text-bottom;
+    margin-right: 2rem;
+}
+.date {
+    text-indent: 3.3rem;
 }
