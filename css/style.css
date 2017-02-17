@@ -1,0 +1,45 @@
+header {
+    background-color: #5FC0CD;
+    overflow: hidden;
+    height: 80px;
+}
+header .nav,header img{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+header .nav {
+    width: 146px;
+    margin:0 auto;
+    text-align: center;
+}
+header img {
+    float: right;
+    margin-right: 30px;
+}
+main li {
+    width: 33.3%;
+    text-align: center;
+    border-bottom: 1px solid #E1E5E7;
+}
+main .btn {
+    outline: none;
+    border: none; !important;
+    width: 100%;
+}
+.btn .caret {
+    float: right;
+    margin-top: 8px;
+}
+.mid-drop {
+    border-left: 1px solid #E1E5E7;
+    border-right: 1px solid #E1E5E7;
+}
+.price {
+    padding: 15px 0;
+    text-align: right;
+}
