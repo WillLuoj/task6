@@ -1,4 +1,8 @@
-header {
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+header{
     background-color: #5FC0CD;
     overflow: hidden;
     height: 80px;
@@ -13,13 +17,14 @@ header .nav,header img{
     transform: translateY(-50%);
 }
 header .nav {
-    width: 146px;
+    width: 240px;
     margin:0 auto;
     text-align: center;
 }
 header img {
     float: right;
     margin-right: 30px;
+    max-width: 80%;
 }
 main li {
     width: 33.3%;
@@ -30,6 +35,7 @@ main .btn {
     outline: none;
     border: none; !important;
     width: 100%;
+    color: #AFBAC0; !important;
 }
 .btn .caret {
     float: right;
@@ -43,19 +49,58 @@ main .btn {
     padding: 15px 0;
     text-align: right;
     color: red;
+    
 }
-.price span {
+.price a {
+    vertical-align: middle;
+    color: red;
+}
+.price .point {
     color: #5FC0CD;
     margin-left: 1rem;
-    font-size: 2rem;
-
-
+    font-size: 3rem;
 }
 .row img {
     width: 1.3rem;
     vertical-align: text-bottom;
     margin-right: 2rem;
 }
+.row div {
+    overflow:hidden; /*不显示超过对象宽度的内容*/
+    text-overflow:ellipsis; /*当对象内文本溢出时显示省略标记（...）*/
+    white-space:nowrap; /*限制在一行内显示所有文本*/
+}
 .date {
     text-indent: 3.3rem;
+    color: black;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8FAFB;
+    text-align: center;
+}
+footer a {
+    display: block;
+}
+footer .edit {
+    margin: 1rem 13%;
+}
+footer img {
+    width: 60%;
+    max-width:100%;
+}
+.home,.mine {
+    margin-top: 1rem;
+}
+.home {
+    color: #5FC0CD;
+}
+.mine,.container-fluid{
+    color: #AFBAC0;
 }
