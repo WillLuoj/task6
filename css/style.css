@@ -80,7 +80,6 @@ main .btn {
 .price {
     padding: 24.5px 0;
     text-align: right;
-    color: red;
 }
 .price a {
     vertical-align: middle;
@@ -91,17 +90,40 @@ main .btn {
     margin-left: 1rem;
     font-size: 3rem;
 }
-.row img {
-    width: 1.3rem;
-    vertical-align: text-bottom;
-    margin-right: 2rem;
+
+.row .place {
+    background: url(../image/img-sprites.png) 0 0  no-repeat;
+    -webkit-background-size: 16.8px;
+    background-size: 16.8px;
+    height: 14.7px;
+    width: 13.3px;
+    display: inline-block;
+    vertical-align: middle;
 }
+.row p{
+    display: inline-block;
+    text-indent: 2.3rem;
+    margin-bottom: 0; !important;
+}
+.row .date-p {
+    background:url(../image/img-sprites.png) 0 -16.8px no-repeat ;
+    -webkit-background-size: 16.8px;
+    background-size: 16.8px;
+    height:16.8px;
+    width:16.8px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
 .row div {
     overflow:hidden; /*不显示超过对象宽度的内容*/
     text-overflow:ellipsis; /*当对象内文本溢出时显示省略标记（...）*/
     white-space:nowrap; /*限制在一行内显示所有文本*/
 }
-.col-sm-8 div, .col-xs-6 div {
+.row {
+    padding: 1rem 0;
+}
+.col-sm-8 div, .col-xs-8 div {
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -115,7 +137,6 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100vw;
-
     display: flex;
     justify-content: center;
     align-items: center;
