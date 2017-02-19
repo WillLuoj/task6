@@ -3,11 +3,13 @@ a:hover {
     cursor: pointer;
 }
 header{
+    position: relative;
     background-color: #5FC0CD;
     overflow: hidden;
     height: 80px;
 }
-header .nav,header img{
+/*header内元素垂直居中*/
+header div{
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -16,20 +18,48 @@ header .nav,header img{
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-header .nav {
-    width: 240px;
+header .nav-div {
+    /*使header的胶囊式标签页水平居中，兼容ie8以上浏览器*/
+    display: table;
     margin:0 auto;
-    text-align: center;
+    overflow: hidden;
 }
-header img {
-    float: right;
-    margin-right: 30px;
+/*header map图标定位*/
+header .map-div{
+    position: absolute;
+    right: 30px;
+}
+header .map-div img {
+    width: 100%;
     max-width: 80%;
 }
+/*调整header胶囊式标签页的样式*/
+.nav-pills>li+li {
+    margin-left: -8px; !important;
+}
+.nav-pills .btn-lg {
+    padding: 0; !important;
+}
+.nav-pills>li>a{
+    padding: 15px 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.nav-pills>li.inactive>a{
+    background-color: #55A8B3;
+    color: white;
+}
+.nav-pills>li.active>a {
+    background-color: white;
+    color: #5FC0CD;
+}
+/*调整下拉菜单样式*/
 main li {
     width: 33.3%;
     text-align: center;
     border-bottom: 1px solid #E1E5E7;
+    padding: 5px 0;
 }
 main .btn {
     outline: none;
@@ -45,11 +75,12 @@ main .btn {
     border-left: 1px solid #E1E5E7;
     border-right: 1px solid #E1E5E7;
 }
+
+/*调整信息表格样式*/
 .price {
-    padding: 15px 0;
+    padding: 24.5px 0;
     text-align: right;
     color: red;
-    
 }
 .price a {
     vertical-align: middle;
@@ -70,10 +101,16 @@ main .btn {
     text-overflow:ellipsis; /*当对象内文本溢出时显示省略标记（...）*/
     white-space:nowrap; /*限制在一行内显示所有文本*/
 }
+.col-sm-8 div, .col-xs-6 div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 .date {
     text-indent: 3.3rem;
     color: black;
 }
+
+/*底部菜单栏样式*/
 footer {
     position: fixed;
     bottom: 0;
